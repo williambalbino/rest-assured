@@ -3,13 +3,21 @@ package dto;
 public class User {
 
     int id;
-    String userName;
+    String username;
     String firstName;
     String lastName;
     String email;
     String password;
     String phone;
     int userStatus = 0;
+
+    public int getUserStatus() {
+        return userStatus;
+    }
+
+    public void setUserStatus(int userStatus) {
+        this.userStatus = userStatus;
+    }
 
     public int getId() {
         return id;
@@ -19,12 +27,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getFirstName() {
