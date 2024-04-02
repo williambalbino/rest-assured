@@ -9,7 +9,9 @@ public class UserDataProvider {
 
         return new Object[][]
             {
-                    {123, "john.doe", "John", "Doe", "john@email.com", "pass123", "14567899874"}
+                    //id, username, firstname, lastname, email, password, phone
+                    {123, "john.doe", "John", "Doe", "john@email.com", "pass123", "14567899874"},
+
             };
     }
 
