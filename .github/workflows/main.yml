@@ -19,5 +19,5 @@ jobs:
            cache: maven
          
        - name: Run Api Tests
-         run: mvn test 
+         run: mvn test -DsuiteXmlFile=testng.xml
       
