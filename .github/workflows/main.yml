@@ -20,4 +20,7 @@ jobs:
          
        - name: Run Api Tests
          run: mvn test -DsuiteXmlFile=testng.xml
+
+       - name: Run Api Tests 2
+         run: mvn test -DsuiteXmlFile=testng2.xml
       
