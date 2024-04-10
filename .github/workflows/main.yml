@@ -2,7 +2,9 @@ name: run api tests
 
 on:
   push:
-    branches: "feature/*"
+      branches: [ "master", "feature/*" ]
+  pull_request:
+      branches: [ "master" ]
 
 jobs:
   build:
@@ -19,5 +21,8 @@ jobs:
            cache: maven
          
        - name: Run Api Tests
-         run: mvn test 
+         run: mvn test -DsuiteXmlFile=testng.xml
+
+       - name: Run Api Tests 2
+         run: mvn test -DsuiteXmlFile=testng2.xml
       
