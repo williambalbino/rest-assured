@@ -20,9 +20,14 @@ jobs:
            distribution: temurin
            cache: maven
          
-       - name: Run Api Tests
-         run: mvn test -DsuiteXmlFile=testng.xml
+  run-api-tests:
+    runs-on: ubuntu-latest
 
-       - name: Run Api Tests 2
-         run: mvn test -DsuiteXmlFile=testng2.xml
+    steps:
+      - name: Run Api Tests
+        run: mvn test -DsuiteXmlFile=testng.xml
+
+      - name: Run Api Tests 2
+        run: mvn test -DsuiteXmlFile=testng2.xml
+
       
