@@ -48,6 +48,25 @@ public class UserTests {
         Assert.assertEquals(response.statusCode(), 200);
     }
 
+    @Test()
+    public void testPostUserByFactory(){
+        userPayload = new User();
+        User user = UserFactory.createUser();
+
+        userPayload.setId(user.getId());
+        userPayload.setUsername(user.getUsername());
+        userPayload.setFirstName(user.getFirstName());
+        userPayload.setLastName(user.getLastName());
+        userPayload.setEmail(user.getEmail());
+        userPayload.setPassword(user.getPassword());
+        userPayload.setPhone(user.getPhone());
+
+        Response response = UserEndPoints.createUserByPropertiesFIle(userPayload);
+        response.then().log().all();
+
+        Assert.assertEquals(response.statusCode(), 200);
+    }
+
     @Test
     public void testGetUser() {
         userPayload = UserFactory.createUser();
